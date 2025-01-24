@@ -1,7 +1,7 @@
 # import math
 # import sys
 # import requests
-from math import pi
+from math import pi # імпортування змінної pi
 
 print ('Hello, worlds!')
 # print (sys.argv[0])
