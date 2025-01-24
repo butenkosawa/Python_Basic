@@ -14,3 +14,6 @@ print(pi)
 
 a = 1986
 print(a)
+
+b = a - 1990
+
