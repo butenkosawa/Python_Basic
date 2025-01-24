@@ -1,13 +1,16 @@
 # import math
 # import sys
-import requests
+# import requests
 from math import pi
 
-print ('Hello, world!')
+print ('Hello, worlds!')
 # print (sys.argv[0])
 # print (sys.argv[1])
 print(pi)
 
-response = requests.get('https://flowers.ua/')
-print(response.status_code)
-print(response.text)
+# response = requests.get('https://flowers.ua/')
+# print(response.status_code)
+# print(response.text)
+
+a = 1986
+print(a)
