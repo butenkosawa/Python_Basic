@@ -13,4 +13,4 @@ num2, b = divmod(a, 1000)
 num3, c = divmod(b, 100)
 num4, num5 = divmod(c, 10)
 
-print(num5, num4, num3, num2, num1)
+print(num5, num4, num3, num2, num1, sep='')
