@@ -1,4 +1,12 @@
-lst = [1, 2, 3, 4, 5, 6, 7, 9]
+import random
+
+len_lst = random.randint(3,10)
+lst = []
+
+for lst_elem in range(0, len_lst):
+    lst.append(random.randint(0,99))
+
 lst_1 = [lst[0], lst[2], lst[-2]]
+
 print(lst)
 print(lst_1)
