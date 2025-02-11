@@ -1,0 +1,13 @@
+print(ord('a'), end=' ')
+print(ord('0'), end=' ')
+print(ord('\n'), end=' ')
+print(ord('\t'), end=' ')
+print(ord('D'), end=' ')
+print(ord('I'), end=' ')
+print(ord('І'), end=' ')
+
+print()
+print(chr(123), end=' ')
+print(chr(96), end=' ')
+print(chr(178), end=' ')
+print(chr(179), end=' ')
