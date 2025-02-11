@@ -18,6 +18,6 @@ while True:
             result = float(num_1) / float(num_2)
     print(result)
 
-    ask = str(input('Enter "Yes" if you want to continue, else press the "Enter" key: '))
-    if ask.upper() != "YES":
+    ask = str(input('Enter "yes" or "y" if you want to continue, else press the "Enter" key: '))
+    if ask.upper() not in ["YES", "Y"]:
         break
