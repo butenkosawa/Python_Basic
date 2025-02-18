@@ -14,8 +14,8 @@
 def common_elements():
     set_3 = set([i for i in range(100) if i % 3 == 0])
     set_5 = set([i for i in range(100) if i % 5 == 0])
-    print(set_3.intersection(set_5))
+    return set_3.intersection(set_5)
 
 
-common_elements()
+print(common_elements())
 
