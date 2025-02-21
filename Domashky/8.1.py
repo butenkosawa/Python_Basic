@@ -15,8 +15,6 @@
 # assert add_one([9]) == [1, 0], 'Test4'
 # print("ОК")
 
-
-
 def add_one(number_list):
     number = int("".join([str(dg) for dg in number_list])) + 1
     add_one_list = []
@@ -24,5 +22,6 @@ def add_one(number_list):
         number, dg = divmod(number, 10)
         add_one_list.insert(0,dg)
     return add_one_list
+
 
 print(add_one([1, 2, 3, 4]))
