@@ -7,3 +7,19 @@
 # Введіть рядок: Hello World
 # Кількість голосних літер: 3
 # Кількість приголосних літер: 7
+
+text = "Python is one of the top programming languages in the world."
+vow = 'aeiou'
+con = 'bcdfghjklmnpqrstvwxyz'
+
+vowel = 0
+consonant = 0
+
+for lt in text.lower():
+    if lt in vow:
+        vowel += 1
+    elif lt in con:
+        consonant += 1
+
+print(f"Кількість голосних літер: {vowel}")
+print(f"Кількість приголосних літер: {consonant}")

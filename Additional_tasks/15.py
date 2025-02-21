@@ -7,3 +7,13 @@
 # Приклад:
 # Введіть рядок: The quick brown fox jumps over the lazy dog
 # Рядок є панграмою.
+
+from string import ascii_lowercase
+
+text = "The quick brown fox jumps over the lazy dog"
+
+text_set = set(text.lower().replace(' ', ''))
+lett_set = set(ascii_lowercase)
+
+if text_set == lett_set:
+    print("Рядок є панграмою.")

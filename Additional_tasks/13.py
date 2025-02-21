@@ -10,15 +10,19 @@
 # Введіть ціле число: 12323
 # Число не є паліндромом.
 
-# n = 12321
-n = 1234321
+n = 1231
+# n = 1234321
 nmbrs = []
 
 while n > 0:
     n, r = divmod(n, 10)
     nmbrs.append(r)
 
-mid = round(len(nmbrs) / 2)
-print(mid)
-print(sum(nmbrs[:mid]))
-print(sum(nmbrs[mid:]))
+mid = round(len(nmbrs) / 2 + 0.1)
+
+if len(nmbrs) % 2 == 0:
+    print("Число є паліндромом.") if sum(nmbrs[:mid]) == sum(nmbrs[mid:])\
+        else print("Число не є паліндромом.")
+elif len(nmbrs) % 2 != 0:
+    print("Число є паліндромом.") if sum(nmbrs[:mid]) == sum(nmbrs[mid-1:])\
+        else print("Число не є паліндромом.")

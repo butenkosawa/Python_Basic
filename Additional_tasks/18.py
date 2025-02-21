@@ -9,3 +9,18 @@
 # Усі символи у рядку унікальні.
 # Введіть рядок: Hello Konal
 # Символи 'l' і 'o' повторюються.
+
+text = "Python is one of the top programming languages in the world."
+letters = []
+
+for lt in text.replace(" ", ""):
+    if text.count(lt) >= 2:
+        if lt not in letters:
+            letters.append(lt)
+
+if len(letters) == 0:
+    print("Усі символи у рядку унікальні.")
+elif len(letters) == 1:
+    print(f"Символ {letters[0]} повторюються")
+else:
+    print(f"Символи {', '.join(letters[:-1])} та '{letters[-1]}' повторюються.")
