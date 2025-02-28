@@ -10,7 +10,7 @@
 # 195
 # 200
 
-nmbr = tuple(str(3698652))
+nmbr = tuple(str(4378))
 print(nmbr)
 nmbrs = []
 

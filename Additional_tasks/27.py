@@ -24,3 +24,19 @@
 #   /  V  \    /  V  \    /  V  \
 #  /(  _  )\  /(  _  )\  /(  _  )\
 #    ^^ ^^      ^^ ^^      ^^ ^^
+from random import randint
+
+n = randint(1, 9)
+print(n)
+
+row1 = '_~_'.center(9) + ' ' * 2
+row2 = '(o o)'.center(9) + ' ' * 2
+row3 = '/  V  \\'.center(9) + ' ' * 2
+row4 = '/(  _  )\\'.center(9) + ' ' * 2
+row5 = '^^ ^^'.center(9) + ' ' * 2
+
+print(row1 * n)
+print(row2 * n)
+print(row3 * n)
+print(row4 * n)
+print(row5 * n)

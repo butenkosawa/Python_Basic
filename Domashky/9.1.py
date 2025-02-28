@@ -15,9 +15,16 @@
 # assert popular_words('''When I was One I had just begun When I was Two I was nearly new ''',
 #                      ['i', 'was', 'three', 'near']) == {'i': 4, 'was': 3, 'three': 0, 'near': 0}, 'Test1'
 # print('OK')
+from string import punctuation
 
-def popular_words(text: str, searched_words: list):
-    from string import punctuation
+def popular_words(text: str, searched_words: list) -> dict:
+    """Функція шукає визначені слова в тексті та рахує їх кількість
+
+    :param text: довільний текст
+    :param searched_words: список шуканих слів в нижньому регістрі
+    :return: словник, у якому ключами є шукані слова та значеннями,
+        скільки разів кожне слово зустрічаються в оригінальному тексті
+    """
     count_words = dict.fromkeys(searched_words, 0)
     for el in punctuation:
         text = text.replace(el, "").lower()

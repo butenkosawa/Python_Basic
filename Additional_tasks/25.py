@@ -5,3 +5,10 @@
 # Приклад:
 # Введіть речення: Програмування це цікаво та корисно
 # Довжини слів у реченні: (13, 2, 6, 2, 7)
+
+sentence = 'Програмування це цікаво та корисно'
+sent_lst = sentence.split()
+print(sent_lst)
+
+sent_tpl = tuple(len(word) for word in sent_lst)
+print(sent_tpl)
