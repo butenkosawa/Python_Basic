@@ -14,7 +14,7 @@
 # assert is_even(24945638940387**3) == False, 'Test3'
 
 def is_even(number):
-    return [True, False][int(str(bin(number))[-1])]
+    return [True, False][int(bin(number)[-1])]
 
 
 number1 = 2494563894038**2
