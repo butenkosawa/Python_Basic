@@ -15,3 +15,16 @@
 # 13
 # 21
 # 34
+
+def fib_gen():
+    a, b = 0, 1
+    while True:
+        yield a
+        a, b = b, b + a
+
+n = 20
+fib = fib_gen()
+
+while n > 0:
+    print(next(fib))
+    n -= 1

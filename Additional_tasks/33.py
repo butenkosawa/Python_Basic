@@ -10,3 +10,11 @@
 #
 # Приклад висновку:
 # True
+
+def is_subset(set1, set2):
+    for el in set1:
+        if el not in set2:
+            return False
+    return True
+
+print(is_subset({1, 2, 3}, {1, 2, 3, 4, 5}))

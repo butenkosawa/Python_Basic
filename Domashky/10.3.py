@@ -19,7 +19,7 @@ def is_even(number: int) -> bool:
     :param number: integer number
     :return: True if number is even, else False
     """
-    return True if number % 2 == 0 else False
+    return number % 2 == 0
 
 
 print(is_even(2))

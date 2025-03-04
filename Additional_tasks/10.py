@@ -10,10 +10,13 @@
 
 n = int(input('Введіть ціле позитивне число: n = '))
 
-for i in range(2, n):
-    if n % i == 0:
-        print(f'Число {n} НЕ просте')
-        break
+if n > 1:
+    for i in range(2, n):
+        if n % i == 0:
+            print(f'Число {n} НЕ просте')
+            break
     else:
         print(f'Число {n} є ПРОСТИМ')
-    break
+else:
+    print(f'Число {n} НЕ просте')
+
