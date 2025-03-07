@@ -6,3 +6,10 @@
 # Приклад:
 # power_of_2(8) поверне YES
 # poser_of_2(3) поверне NO.
+
+
+def power_of_2(n):
+    return "YES" if n & n - 1 == 0 else "NO"
+
+for i in range(1, 21):
+    print(i, power_of_2(i))

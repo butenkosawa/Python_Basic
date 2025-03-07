@@ -4,3 +4,10 @@
 #
 # Приклад: ["HellO", "WORLD", "names", "Is", "Sam", "NO", "apple"]
 # Результат: ['Apple', 'Hello', 'Names', 'World']
+
+def sorted_words(words: list):
+    words = sorted(list(map(lambda x: x.title(), words)))
+    return list(filter(lambda x: len(x) > 3, words))
+
+
+print(sorted_words(["HellO", "WORLD", "names", "Is", "Sam", "NO", "apple"]))

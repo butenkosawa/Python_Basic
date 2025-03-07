@@ -6,3 +6,9 @@
 # Приклад:
 # Введіть рядок: hello
 # Кількість унікальних символів: 4
+
+def count_unique_chars(text):
+    return f'В рядку: "{text}"\nКількість унікальних символів: {len(set(text))}'
+
+
+print(count_unique_chars("hello"))
