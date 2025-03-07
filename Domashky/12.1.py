@@ -6,15 +6,19 @@
 # куди потрібно писати, можна задати за замовчуванням.
 # Приклади файлів у вкладенні – файл який потрібно очистити (draft.html) та
 # приклад файлу, який може вийти на виході з очищеним текстом (cleaned.txt).
-# Файл draft.html необхідно скачати і покласти поряд з файлом, де буде
+# Файл draft.html необхідно завантажити та покласти поряд з файлом, де буде
 # вирішення цієї домашки.
 #
 # Додаткове завдання для тих, хто захоче ускладнити рішення - спробуйте
 # прибрати рядки, в яких немає інформації.
 
-# def clean_html_tags(path_file: str, new_file = 'cleaned_html.txt'):
 
-def index_tags(line: str):
+def index_tags(line: str) -> list:
+    """The function searches for the start and end indices of paired html-tags
+
+    :param line: line of the html-file
+    :return: list of tuples with the start and end indices of the html-tags
+    """
     start, end = '<', '>'
     idx_start = []
     idx_end = []
@@ -26,7 +30,12 @@ def index_tags(line: str):
     return list(zip(idx_start, idx_end))
 
 
-def index_tag(line: str):
+def index_tag(line: str) -> list:
+    """The function searches for the start and end index of a single html-tag
+
+    :param line: line of the html-file
+    :return: list whose elements are the start and end indices of the html-tag
+    """
     start, end = '<', '>'
     idx_tag = []
     for idx in range(len(line)):
@@ -38,6 +47,12 @@ def index_tag(line: str):
 
 
 def clean_line_tags(line: str, idx_tags):
+    """The function cleans a string of even html-tags
+
+    :param line: line of the html-file
+    :param idx_tags: list of tuples with starting and ending html-tag indices
+    :return: string without html-tags
+    """
     result = []
     last_end = 0
     for start, end in idx_tags:
@@ -47,11 +62,24 @@ def clean_line_tags(line: str, idx_tags):
 
 
 def clean_line_tag(line: str, idx_tag):
+    """The function cleans a string from a single html-tag
+
+    :param line: line of the html-file
+    :param idx_tag: list whose elements are the starting and ending indices of the html-tag
+    :return: string without the html-tag
+    """
     start, end = idx_tag
     return line[:start] + line[end + 1:]
 
 
 def clean_html_tags(path_file: str, new_file = 'cleaned_html.txt'):
+    """The function reads html-file, cleans the text from html-tags,
+    and writes this text to another file
+
+    :param path_file: filename or path to the html-file to be cleaned
+    :param new_file: the name of the file where the cleaned text should be written
+    :return: text file
+    """
     with open(path_file, 'r', encoding= 'utf-8-sig') as file:
         data = file.readlines()
 
@@ -93,4 +121,3 @@ def clean_html_tags(path_file: str, new_file = 'cleaned_html.txt'):
 
 
 clean_html_tags('draft.html')
-
