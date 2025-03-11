@@ -19,6 +19,7 @@ class Item:
     def __str__(self):
         return f"{self.name}, price: {self.price}"
 
+
 class User:
 
     def __init__(self, name, surname, numberphone):
@@ -28,6 +29,7 @@ class User:
 
     def __str__(self):
         return f"{self.name} {self.surname}"
+
 
 class Purchase:
     def __init__(self, user):
