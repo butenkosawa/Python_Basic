@@ -7,3 +7,10 @@
 # result = find_longest_word(words)
 # print(result)
 # Очікуваний висновок: "dragonfruit"
+
+def find_longest_word(words: list):
+    return sorted(words, key=len)[-1]
+
+w = ["apple", "banana", "cherry", "dragonfruit"]
+print(find_longest_word(w))
+

@@ -13,5 +13,23 @@
 # True
 # False
 
+def is_anagramm(text1: str, text2: str):
+    print(text1)
+    print(text2)
+    text1 = sorted(''.join(filter(lambda x: x.isalpha(), text1)))
+    text2 = sorted(''.join(filter(lambda x: x.isalpha(), text2)))
+    print(text1)
+    print(text2)
+    return text1 == text2
 
-
+t1 = 'eleven plus two'
+t2 = 'twelve plus one'
+print(is_anagramm(t1, t2))
+print('-' * 30)
+t1 = 'I am Lord Voldemort'
+t2 = 'tom marVoLo rIddle'
+print(is_anagramm(t1, t2))
+print('-' * 30)
+t1 = 'Forty five'
+t2 = 'over fifty'
+print(is_anagramm(t1, t2))
