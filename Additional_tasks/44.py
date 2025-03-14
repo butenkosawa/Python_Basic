@@ -1,0 +1,35 @@
+# Реалізувати клас Counter, який представляє лічильник. Клас повинен
+# підтримувати такі операції:
+# - Збільшення значення лічильника на задане число (оператор +=)
+# - Зменшення значення лічильника на задане число (оператор -=)
+# - Перетворення лічильника на рядок (метод __str__)
+# - Отримання поточного значення лічильника (метод __int__)
+#
+# Приклад використання:
+# counter = Counter(5)
+# counter += 3
+# print(counter) # Результат: "Counter: 8"
+# counter -= 2
+# print(int(counter)) # Результат: 6
+
+class Counter:
+
+    def __init__(self, value):
+        self.value = value
+
+    def __str__(self):
+        return 'Counter: ' + str(self.value)
+
+    def __add__(self, other):
+        return self.value + other
+
+    def __sub__(self, other):
+        return self.value - other
+
+
+counter = Counter(5)
+print(counter)
+counter += 3
+print(counter)
+counter -= 2
+print(counter)
