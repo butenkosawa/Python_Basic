@@ -29,3 +29,22 @@
 # -0.45.6 → Ви ввели не правильне число: -0.45.6
 # -5-6    → Ви ввели не правильне число: -5-6
 # .-777   → Ви ввели не правильне число: .-777
+
+# def recognize_number(nmbr: str):
+#
+#     return 'Ви ввели' + f'...' + f'число: {nmbr}'
+#
+#
+#
+# while True:
+#     val = input('Введіть число, або "Вихід" для виходу: ')
+#
+#     if val.lower() in ['exit', 'quit', 'e', 'q', 'вихід']:
+#         break
+#
+#     print('sdfsf')
+
+nmbr = '-000sgfdgWREWRsf03'
+print(nmbr.replace(',','.')) # 0.000
+print(nmbr.casefold()) # False
+
