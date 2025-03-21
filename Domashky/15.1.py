@@ -20,7 +20,7 @@ class Rectangle:
 
     def __mul__(self, n):
         new_square = self.get_square() * n
-        new_width = self.width
+        new_width = self.choise_side()
         new_height = new_square / new_width
         return Rectangle(new_width, new_height)
 
