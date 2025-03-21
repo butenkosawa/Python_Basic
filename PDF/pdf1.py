@@ -1,35 +1,42 @@
 import pdfplumber
 import os
 
-os.chdir("C:\\Users\\SecAdmin\\PycharmProjects\\PythonBasic\\PDF\\cadastral_number")
-pdf_files = os.listdir()
-print(pdf_files)
+l = [('Кадастровий номер', '5320487500:00:010:0336', '5320485200:00:001:0087', '5320485200:00:001:0064', '5320485200:00:007:0015', '5320485200:00:007:0002', '5320485200:00:007:0013', '5320485200:00:007:0019', '5320485200:00:007:0012', '5320485200:00:007:0011', '5320485200:00:007:0010', '5320485200:00:007:0018', '5320485200:00:007:0028', '5320485200:00:007:0026', '5320485200:00:007:0030', '5320486200:00:002:0064', '5320486200:00:002:0065', '5320486200:00:009:0017', '5320485200:00:007:0009', '5320485200:00:007:0001', '5320485200:00:007:0032', '5320487500:00:010:0161', '5320485200:00:007:0003', '5320485200:00:007:0014', '5320485200:00:007:0016', '5320485200:00:007:0004', '5320485200:00:007:0005', '5320485200:00:007:0006', '5320485200:00:007:0027', '5320483400:00:008:0115', '5320483400:00:008:0114', '5320488200:00:001:0010', '5320488200:00:001:0009', '5320488200:00:007:0219', '5320488200:00:003:0439', '5320488200:00:002:0023', '5320488200:00:007:0107', '5320488200:00:007:0796', '5320488200:00:007:0083', '5320488200:00:007:0084', '5320488200:00:007:0721', '5320488200:00:007:0720', '5320488200:00:003:0032', '5320488200:00:007:0795', '5320488200:00:003:0279', '5320488200:00:007:0222', '5320488200:00:003:0408', '5320488200:00:001:0028', '5320488200:00:007:0776', '3225581200:01:003:0044')]
+
+print('5320487500:00:010:0336' in l[0])
 
 
-data = []
 
-for file in pdf_files:
-
-    with pdfplumber.open(file) as pdf:
-        page = pdf.pages[0]
-        text = page.extract_text()
-        data.append((text.split('\n')[-2].split()))
-
-print(data)
-
-# data = zip(pdf_files, data)
-
-for i in range(len(data)):
-    data[i][1] = float(data[i][1])
-
-data = sorted(data, key= lambda x: x[1])
-
-data_w = ''
-for idx, cadastral in enumerate(data, 1):
-    data_w += f'{idx} {cadastral}\n'
-
-os.chdir('..\\')
-print(data_w)
-
-with open('cadastral.txt', 'w', encoding='utf-8-sig') as file:
-    file.write(data_w)
+#
+# os.chdir("C:\\Users\\SecAdmin\\PycharmProjects\\Cadastral_Number_Info\\PDF\\cadastral_number")
+# pdf_files = os.listdir()
+# print(pdf_files)
+#
+#
+# data = []
+#
+# for file in pdf_files:
+#
+#     with pdfplumber.open(file) as pdf:
+#         page = pdf.pages[0]
+#         text = page.extract_text()
+#         data.append(text.split('\n')[-2].split())
+#
+# print(data)
+#
+# # data = zip(pdf_files, data)
+#
+# for i in range(len(data)):
+#     data[i][1] = float(data[i][1])
+#
+# data = sorted(data, key= lambda x: x[1])
+#
+# data_w = ''
+# for idx, cadastral in enumerate(data, 1):
+#     data_w += f'{idx} {cadastral}\n'
+#
+# os.chdir('..\\')
+# print(data_w)
+#
+# with open('cadastral.txt', 'w', encoding='utf-8-sig') as file:
+#     file.write(data_w)

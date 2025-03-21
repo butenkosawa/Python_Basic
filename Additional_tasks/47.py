@@ -44,7 +44,18 @@
 #
 #     print('sdfsf')
 
-nmbr = '-000sgfdgWREWRsf03'
-print(nmbr.replace(',','.')) # 0.000
-print(nmbr.casefold()) # False
+nmbr = '0,00'
 
+try:
+    # Перевірка першого символу. Має бути або "-" або цифра.
+    assert nmbr[0].isdigit() or nmbr[0] in "-,.", f"Ви ввели не правильне число: {nmbr}"
+
+    # Перевірка кількості '.' та ','. Має бути лише 1 '.' або 1 ','.
+    assert nmbr.count('.') == 1 or nmbr.count(',') == 1, f"Ви ввели не правильне число: {nmbr}"
+
+except AssertionError as err:
+    print(err)
+
+# else:
+    # Перевірка чи є чило нулем.
+    

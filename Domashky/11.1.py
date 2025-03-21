@@ -31,3 +31,18 @@ print(list(prime_generator(10)))
 print(list(prime_generator(15)))
 print(list(prime_generator(29)))
 
+
+# Рішення викладача:
+
+# def prime_generator(end):
+#     for i in range(2, end + 1):
+#         if all(i % n != 0 for n in range(2, i)):
+#             yield i
+
+end = 10
+
+for i in range(2, end + 1):
+    print(i)
+
+lst = [3 % n != 0 for n in range(2, 3)]
+print(lst)
