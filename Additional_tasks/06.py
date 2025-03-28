@@ -23,3 +23,17 @@ print('Логічне НЕ (not): ', logic_1 is not logic_2)
 print('Порівняння двох значень на рівність: ', logic_1 == logic_2)
 print('Порівняння двох значень на нерівність): ', logic_1 != logic_2)
 
+# Рішення викладача:
+
+a = input("Введите значение a (True или False):")
+b = input("Введите значение b (True или False):")
+a = True if a.lower() == "true" else False
+b = True if b.lower() == "true" else False
+
+print("a and b =", a and b)
+print("a or b =", a or b)
+print("not a =", not a)
+print("not b =", not b)
+print("a == b =", a == b)
+print("a != b =", a != b)
+

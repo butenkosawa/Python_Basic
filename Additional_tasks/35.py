@@ -12,3 +12,8 @@ def count_unique_chars(text):
 
 
 print(count_unique_chars("hello"))
+
+# Рішення викладача:
+
+s = set(input("Введіть рядок: "))
+print("Кількість унікальних символів:", len(s))

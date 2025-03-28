@@ -11,3 +11,14 @@ list_2 = list_two_elements([7, 4, 6, 2])
 print(list_2)
 list_3 = list_two_elements([5])
 print(list_3)
+
+# Рішення викладача:
+
+l = input('Введіть список чисел через пробіл: ').split()
+
+
+def listik(a):
+    return [a[0], a[-1]]
+
+
+print(listik(l))

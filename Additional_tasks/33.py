@@ -18,3 +18,18 @@ def is_subset(set1, set2):
     return True
 
 print(is_subset({1, 2, 3}, {1, 2, 3, 4, 5}))
+
+# Рішення викладача:
+
+def is_subset(s1, s2):
+    p = True
+    for i in s1:
+        if i not in s2:
+            p = False
+            break
+    return p
+
+
+set1 = {1, 2, 3}
+set2 = {1, 2, 3, 4, 5}
+print(is_subset(set1, set2))

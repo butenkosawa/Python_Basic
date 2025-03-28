@@ -8,19 +8,17 @@
 #
 # def is_even(number):
 #     pass
-#
-# assert is_even(2494563894038**2) == True, 'Test1'
-# assert is_even(1056897**2) == False, 'Test2'
-# assert is_even(24945638940387**3) == False, 'Test3'
+
 
 def is_even(number):
     return [True, False][int(bin(number)[-1])]
 
 
-number1 = 2494563894038**2
-number2 = 1056897**2
-number3 = 24945638940387**3
+assert is_even(2494563894038**2) == True, 'Test1'
+assert is_even(1056897**2) == False, 'Test2'
+assert is_even(24945638940387**3) == False, 'Test3'
 
-print(is_even(number1))
-print(is_even(number2))
-print(is_even(number3))
+# Рішення викладача:
+
+def is_even(digit: int) -> bool:
+    return int(str(digit)[-1]) in range(0, 9, 2)

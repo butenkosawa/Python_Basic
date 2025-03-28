@@ -12,3 +12,15 @@ def two_elements(list_of_numbers: list):
 
 
 print(two_elements([1, 2, 2, 8]))
+
+# Рішення викладача:
+
+def has_two_consecutive(nums, target):
+    for i in range(len(nums) - 1):
+        if nums[i] == target == nums[i+1]:
+            return True
+    return False
+
+
+a = [1, 2, 3, 7, 4, 5, 6, 7, 7, 8, 9]
+print(has_two_consecutive(a, int(input('Enter your number: '))))

@@ -12,3 +12,11 @@ print(sent_lst)
 
 sent_tpl = tuple(len(word) for word in sent_lst)
 print(sent_tpl)
+
+# Рішення викладача:
+
+s = input().split()
+d = []
+for i in s:
+    d.append(len(i))
+print(tuple(d))

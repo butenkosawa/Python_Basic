@@ -17,3 +17,16 @@ lett_set = set(ascii_lowercase)
 
 if text_set == lett_set:
     print("Рядок є панграмою.")
+
+    # Рішення викладача:
+alphabet = "ABCDEFGIJHKLMNOPQRSTUVWXYZ"
+s = input("Введіть рядок:")
+i = 0
+while i < len(alphabet):
+    if alphabet[i] in s.upper():
+        i += 1
+    else:
+        print("Рядок не є панграмою")
+        break
+else:
+    print("Рядок є панграмою")

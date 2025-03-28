@@ -10,10 +10,19 @@
 n = int(input('Введіть натуральне десяткове число: '))
 print('Десяткове число:', n, sep='\t')
 dg10 = []
+print(bin(n))
 
 while n > 0:
     dg10.insert(0, n % 2)
     n = n // 2
 
 print('Двійкове число:', "".join([str(dg) for dg in dg10]), sep='\t' * 2)
-print(bin(n))
+
+# Рішення викладача:
+
+number = int(input('Введіть натуральне десяткове число:'))
+res = ''
+while number > 0:
+    res = str(number % 2) + res
+    number //= 2
+print('Двійкове уявлення числа:', res)

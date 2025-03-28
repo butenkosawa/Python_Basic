@@ -88,3 +88,5 @@ except GrouplimitException as err:
     print(err)
 
 print(gr)
+
+# Рішення викладача:

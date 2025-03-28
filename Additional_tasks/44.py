@@ -33,3 +33,23 @@ counter += 3
 print(counter)
 counter -= 2
 print(counter)
+
+# Рішення викладача:
+
+class Counter:
+    def __init__(self, start):
+        self.value = start
+
+    def __add__(self, step):
+        self.value += step
+        return Counter(self.value)
+
+    def __sub__(self, step):
+        self.value -= step
+        return Counter(self.value)
+
+    def __str__(self):
+        return f"Counter: {self.value}"
+
+    def __int__(self):
+        return self.value

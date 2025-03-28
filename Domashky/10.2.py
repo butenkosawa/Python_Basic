@@ -10,13 +10,6 @@
 # def first_word(text):
 #     """ Пошук першого слова """
 #     pass
-# assert first_word("Hello world") == "Hello", 'Test1'
-# assert first_word("greetings, friends") == "greetings", 'Test2'
-# assert first_word("don't touch it") == "don't", 'Test3'
-# assert first_word(".., and so on ...") == "and", 'Test4'
-# assert first_word("hi") == "hi", 'Test5'
-# assert first_word("Hello.World") == "Hello", 'Test6'
-# print('OK')
 
 from string import punctuation
 
@@ -40,10 +33,22 @@ def first_word(text: str) -> str:
 
     return text[0]
 
+assert first_word("Hello world") == "Hello", 'Test1'
+assert first_word("greetings, friends") == "greetings", 'Test2'
+assert first_word("don't touch it") == "don't", 'Test3'
+assert first_word(".., and so on ...") == "and", 'Test4'
+assert first_word("hi") == "hi", 'Test5'
+assert first_word("Hello.World") == "Hello", 'Test6'
+print('OK')
 
-print(first_word("Hello world"))
-print(first_word("greetings, friends"))
-print(first_word("don't touch it"))
-print(first_word(".., and so on ..."))
-print(first_word("hi"))
-print(first_word("Hello.World"))
+# Рішення викладача
+
+def first_word(text: str) -> str:
+    for elem in text:
+        if elem in string.punctuation and elem != "'":
+            text = text.replace(elem, ' ')
+
+    string_list = text.split()
+
+    if string_list:
+        return string_list[0]

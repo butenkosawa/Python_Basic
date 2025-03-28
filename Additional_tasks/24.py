@@ -16,3 +16,8 @@ text_list[0] = text_list[0].title()
 text_mod = " ".join(text_list)
 print(text)
 print(text_mod)
+
+# Рішення викладача:
+
+s = input("Введіть строку: ").split()
+print("Перевернута строка:", " ".join(s[::-1]).capitalize())

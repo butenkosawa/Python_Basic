@@ -11,3 +11,12 @@ def sorted_words(words: list):
 
 
 print(sorted_words(["HellO", "WORLD", "names", "Is", "Sam", "NO", "apple"]))
+
+# Рішення викладача:
+
+def func(list_str):
+    return sorted(filter(lambda x: len(x) > 3, map(str.title, list_str)))
+
+
+strings = ["HellO", "WORLD", "names", "Is", "Sam", "NO", "apple"]
+print(func(strings))

@@ -21,3 +21,15 @@ str = "Python"
 print(str.center(10, "="))
 print(str.center(21, "="))
 print(str.rjust(21, "="))
+
+# Рішення викладача:
+
+s = input("Введіть рядок: ")
+d = int(input("Введіть ширину: "))
+while d <= len(s):
+    d = int(input("Ширина повинна бути більшою за довжину рядка. Введіть ширину: "))
+if len(s) % 2 == d % 2:
+    s = s.center(d)
+else:
+    s = s.rjust(d)
+print(s)

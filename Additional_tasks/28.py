@@ -28,3 +28,17 @@ fib = fib_gen()
 while n > 0:
     print(next(fib))
     n -= 1
+
+# Рішення викладача:
+
+def fibonacci_generator():
+    a, b = 0, 1
+    while True:
+        yield a
+        a, b = b, a + b
+
+
+N = int(input("Введите число: "))
+fib_gen = fibonacci_generator()
+for i in range(N):
+    print(next(fib_gen))

@@ -34,3 +34,13 @@ print(correct_sentence("hello"))
 print(correct_sentence("Greetings. Friends"))
 print(correct_sentence("Greetings, friends."))
 print(correct_sentence("greetings, friends."))
+
+# Рішення викладача
+
+def correct_sentence(text: str) -> str:
+    return (text[0].capitalize() + text[1:]).rstrip(".") + "."
+
+
+result = correct_sentence("greetings, friends.")
+
+print(result)

@@ -26,3 +26,17 @@ if len(nmbrs) % 2 == 0:
 elif len(nmbrs) % 2 != 0:
     print("Число є паліндромом.") if sum(nmbrs[:mid]) == sum(nmbrs[mid-1:])\
         else print("Число не є паліндромом.")
+
+# Рішення викладача:
+
+N = int(input("Введіть ціле число:"))
+saveN = N
+reverseN = 0
+while N > 0:
+    reverseN *= 10
+    reverseN += N % 10
+    N //= 10
+if saveN == reverseN:
+    print("Число є паліндромом")
+else:
+    print("Число не є паліндромом")

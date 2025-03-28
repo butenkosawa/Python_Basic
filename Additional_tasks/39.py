@@ -14,3 +14,15 @@ def find_longest_word(words: list):
 w = ["apple", "banana", "cherry", "dragonfruit"]
 print(find_longest_word(w))
 
+# Рішення викладача:
+
+from typing import List
+
+
+def find_longest_word(w: List[str]) -> str:
+    return max(w, key=len)
+
+
+words = ["apple", "banana", "cherry", "dragonfruit"]
+result = find_longest_word(words)
+print(result)

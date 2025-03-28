@@ -27,3 +27,15 @@ print('Добуток:', a * b)
 print('Ділення:', a / b)
 print('Залишок від ділення:', a % b)
 print('Перше число у ступені другого числа:', a ** b)
+
+# Рішення викладача:
+
+first_number = int(input("Введіть перше число: "))
+second_number = int(input("Введіть друге число: "))
+
+print("Сумма: ", first_number + second_number)
+print("Різниця: ", first_number - second_number)
+print("Добуток: ", first_number * second_number)
+print("Ділення: ", first_number / second_number)
+print("Залишок від розподілу: ", first_number % second_number)
+print("Перше число у ступені другого числа: ", first_number ** second_number)

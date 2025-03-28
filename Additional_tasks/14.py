@@ -11,3 +11,20 @@ n = int(input("Введіть ціле число: "))
 sum_qu = sum([int(i) ** len(str(n)) for i in str(n)])
 if n == sum_qu:
     print("Число є числом Армстронга.")
+
+    # Рішення викладача:
+N = int(input("Введіть натуральне число:"))
+saveN = N
+digits = 0
+while N > 0:
+    N //= 10
+    digits += 1
+arm = 0
+N = saveN
+while N > 0:
+    arm += (N % 10) ** digits
+    N //= 10
+if saveN == arm:
+    print("Число є числом Армстронга")
+else:
+    print("Число не є числом Армстронга")

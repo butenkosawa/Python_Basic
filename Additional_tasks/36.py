@@ -24,3 +24,16 @@ def calculate_average_grade(students_grades: dict) -> dict:
 
 grades = {'Alice': [85, 90, 92], 'Bob': [78, 80, 84], 'Carol': [92, 88, 95]}
 print(calculate_average_grade(grades))
+
+# Рішення викладача:
+
+def calculate_average_grade(x):
+    k = {}
+    for key, value in x.items():
+        k[key] = round(sum(value) / len(value), 2)
+    return k
+
+
+grades = {'Alice': [85, 90, 92], 'Bob': [78, 80, 84], 'Carol': [92, 88, 95]}
+print(calculate_average_grade(grades))
+

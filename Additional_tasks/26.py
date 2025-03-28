@@ -10,3 +10,9 @@ nmbrs = input("Введіть список чисел, розділених пр
 nmbrs = [int(n) for n in nmbrs]
 nmbrs.sort(reverse=True)
 print(f'Відсортований список чисел: {nmbrs}')
+
+# Рішення викладача:
+
+s = [int(p) for p in input("Введіть список чисел, розділених пробілами: ").split()]
+s.sort(reverse=True)
+print("Відсортований список чисел:", s)

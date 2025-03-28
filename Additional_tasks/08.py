@@ -30,3 +30,18 @@ elif c > a and c > b:
         large, middle, small = c, b, a
 
 print('{}, {}, {}'.format(small, middle, large))
+
+# Рішення викладача:
+
+first_number = int(input('Введіть перше число: '))
+second_number = int(input('Введіть друге число: '))
+third_number = int(input('Введіть третє число: '))
+
+if first_number > second_number:
+    first_number, second_number = second_number, first_number
+if second_number > third_number:
+    second_number, third_number = third_number, second_number
+if first_number > second_number:
+    first_number, second_number = second_number, first_number
+
+print(f'Числа в порядку зростання: {first_number}, {second_number}, {third_number}')

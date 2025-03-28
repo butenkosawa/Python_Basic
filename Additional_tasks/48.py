@@ -35,4 +35,15 @@
 #
 # *Важливо! Результатом додавання або віднімання завжди буде об'єкт типу String.
 
-ZeroDivisionError
+
+
+
+# Рішення викладача:
+
+class String(str):
+
+    def __add__(self, other):
+        return String(super().__add__(str(other)))
+
+    def __sub__(self, other):
+        return String(self.replace(str(other), "", 1))

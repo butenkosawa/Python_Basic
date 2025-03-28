@@ -13,3 +13,14 @@ def sum_digits(number):
     return number % 10 + sum_digits(number // 10)
 
 print(sum_digits(12345))
+
+# Рішення викладача:
+
+def sum_digits(n):
+    if n < 10:
+        return n
+    return n % 10 + sum_digits(n//10)
+
+
+number = int(input("Введіть число: "))
+print(f"Сума цифр числа {number} дорівнює {sum_digits(number)}", )

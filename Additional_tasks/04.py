@@ -17,3 +17,16 @@
 point1 = list(input('Введіть координати першої точки (x1, y1): ').replace(' ', '').split(','))
 point2 = list(input('Введіть координати першої точки (x2, y2): ').replace(' ', '').split(','))
 print('Відстань між точками:', ((float(point2[0]) - float(point1[0])) ** 2 + (float(point2[1]) - float(point1[1])) ** 2) ** 0.5)
+
+# Рішення викладача:
+
+point_1 = input('Введіть координати першої точки (x1, y1): ').split(',')
+point_2 = input('Введіть координати другої точки (x1, y1): ').split(',')
+
+point_1_x = int(point_1[0].strip())
+point_1_y = int(point_1[-1].strip())
+point_2_x = int(point_2[0].strip())
+point_2_y = int(point_2[-1].strip())
+
+distance = ((point_2_x - point_1_x) ** 2 + (point_2_y - point_1_y) ** 2) ** 0.5
+print('Відстань між точками:', round(distance, 2))

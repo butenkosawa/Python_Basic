@@ -12,3 +12,14 @@ lst_res = [lst_1, lst_2]
 
 print(lst_0)
 print(lst_res)
+
+# Рішення викладача
+
+input_list = [56, 78, 20]
+
+mid = (len(input_list) + 1) // 2
+
+first_half = input_list[:mid]
+second_half = input_list[mid:]
+
+print(input_list, "=>", [first_half, second_half])

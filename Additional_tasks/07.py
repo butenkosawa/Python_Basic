@@ -14,3 +14,14 @@ if year % 4 == 0:
         print("Рік є високосним.")
 else:
     print('Рік не є високосним.')
+
+# Рішення викладача:
+
+year = int(input("Введіть рік: "))
+
+if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:
+    result = "є"
+else:
+    result = "не є"
+
+print(f"Рік {result} високосним.")

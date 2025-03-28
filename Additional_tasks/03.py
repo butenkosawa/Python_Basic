@@ -16,3 +16,15 @@ from math import pi
 r = float(input('Введіть радіус кола: '))
 print('Довжина кола:', 2 * pi * r )
 print('Площа кола:', pi * r ** 2)
+
+# Рішення викладача:
+
+import math
+
+radius = float(input("Введіть радіус кола: "))
+
+circumference = 2 * math.pi * radius
+area = math.pi * radius ** 2
+
+print("Довжина кола: ", circumference)
+print("Площа кола: ", area)

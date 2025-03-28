@@ -11,3 +11,9 @@ updata2 = list(map(lambda x: str(x) if type(x) is int else x, data))
 print(data)
 print(updata)
 print(updata2)
+
+# Рішення викладача:
+
+values = [1, 2, '3', 'forth', 'end', 99, True, None]
+new_value = list(map(lambda x: str(x) if type(x) is int else x, values))
+print(new_value)

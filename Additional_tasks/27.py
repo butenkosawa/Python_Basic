@@ -40,3 +40,11 @@ print(row2 * n)
 print(row3 * n)
 print(row4 * n)
 print(row5 * n)
+
+# Рішення викладача:
+
+n = int(input("Введите число пингвинов: "))
+penguin = ["_~_", "(o o)", "/  V  \\", "/(  _  )\\", "^^ ^^"]
+for i in penguin:
+    # print(i.center(11) * n)
+    print(f"{i:^11}" * n)

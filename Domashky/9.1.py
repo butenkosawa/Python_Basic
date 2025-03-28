@@ -12,9 +12,7 @@
 # Приклад:
 # def popular_words (text, words):
 # pass
-# assert popular_words('''When I was One I had just begun When I was Two I was nearly new ''',
-#                      ['i', 'was', 'three', 'near']) == {'i': 4, 'was': 3, 'three': 0, 'near': 0}, 'Test1'
-# print('OK')
+
 from string import punctuation
 
 def popular_words(text: str, searched_words: list) -> dict:
@@ -44,3 +42,14 @@ words_2 = ['python', 'in', 'the', 'world', 'ai', 'develop']
 
 print(popular_words(sentence, words))
 print(popular_words(sentence_2, words_2))
+
+assert popular_words('''When I was One I had just begun When I was Two I was nearly new ''',
+                     ['i', 'was', 'three', 'near']) == {'i': 4, 'was': 3, 'three': 0, 'near': 0}, 'Test1'
+print('OK')
+
+# Рішення викладача
+
+def popular_words(text, words):
+    word_list = text.lower().split()
+    result = {word: word_list.count(word) for word in words}
+    return result

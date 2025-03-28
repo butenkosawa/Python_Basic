@@ -16,3 +16,19 @@ while len(fibonachi_list) < n:
 
 print(f'Перші {n} чисел Фібоначчі:')
 print(''.join([str(dg)+', ' for dg in fibonachi_list]).strip(", "))
+
+# Рішення викладача:
+
+N = int(input('Введіть число N:'))
+a = 0
+print('Перші', N, 'числ Фібоначчі:', end='')
+b = 1
+count = 2
+while count <= N:
+    print(a, end=', ')
+    c = a + b
+    a = b
+    b = c
+    count += 1
+else:
+    print(a)
